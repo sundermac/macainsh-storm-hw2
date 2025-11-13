@@ -29,7 +29,7 @@ header {
 #character-nav {
     padding: 40px 0;
     background-color: #0b0b0b;
-    background-image: url(/images/characters-bg.jpg);
+    background-image: url(../images/characters-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: soft-light;
@@ -54,7 +54,7 @@ header {
 }
 
 #characters li img:hover {
-    filter: contrast(125%);
+    filter: sepia(25%);
     background-color: #044360;
     box-shadow: 0px 0px 15px 2px #f05075;
     border-radius: 50% 50% 0 50%;
@@ -95,4 +95,77 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Lightbox */
+
+.lightbox {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    background-repeat: no-repeat;
+    background-size: 55vh;
+    background-position: 35px bottom;
+}
+
+.lightbox:target {
+    display: block;
+}
+
+/* Ponyo */
+#lightbox1 {
+    background-image: url(../images/ponyo-lb.png);
+}
+
+/* Sōsuke */
+#lightbox2 {
+    background-image: url(../images/sosuke-lb.png);
+}
+
+/* Lisa */
+#lightbox3 {
+    background-image: url(../images/lisa-lb.png);
+}
+
+/* Fujimoto */
+#lightbox4 {
+    background-image: url(../images/fujimoto-lb.png);
+}
+
+.lightbox-close {
+    color: white;
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: bold;
+    margin-left: 95vw;
+    display: inline-block;
+    margin-top: 2vh;
+}
+
+.lightbox-close:hover {
+    color: #f05075;
+}
+
+.lightbox section {
+    width: 600px;
+    margin-left: 35%;
+    margin-top: 50px;
+}
+
+.lightbox-heading {
+    font-size: 32px;
+}
+
+.lightbox-text {
+    line-height: 30px;
+}
+
+.lightbox-highlight {
+    display: inline;
+    color: #f05075;
 }
